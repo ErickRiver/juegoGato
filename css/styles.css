@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --clr-negro: #1c1c1c;
+    --clr-gris: #ececec;
+    --clr-blanco: #eee8e8;
+
+    --clr-naranja: #cf6b23;
+    --clr-verde: rgb(83, 170, 28);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--clr-black);
+    font-family: "Rubik", sans-serif;
+}
+
+body {
+    background-color: var(--clr-blanco);
+
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: var(--clr-negro);
+    color: var(--clr-blanco);
+    border: 2px solid var(--clr-negro);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: .3s ease all;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.botones.reiniciar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 520px;
+    margin-top: 50px;
+}
+
+.botones.reiniciar .btn.reiniciar span {
+    color: #000;
+}
+
+.btn.reiniciar {
+    background: none;
+    color: #000;
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+    background-color: var(--clr-naranja);
+}
+
+@keyframes btnReiniciarAnimacion {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+.btn.reiniciar svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: none;
+}
+
+.btn.reiniciar rect {
+    width: 100%;
+    height: 100%;
+    stroke: #000;
+    stroke-width: 8px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    transition: .8s ease all;
+    animation: btnAdivinarAnimacion 4s infinite;
+    animation-delay: 2s;
+}
+
+.btn.reiniciar:hover rect {
+    stroke-dashoffset: 0;
+    animation: none;
+}
+
+.contenedor {
+    width: 30%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.cuadro {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+
+#txtJugador {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#cuadro1 {
+    border-right: 2px solid var(--clr-negro);
+    border-bottom: 2px solid var(--clr-negro);
+}
+
+#cuadro2 {
+    border-bottom: 2px solid var(--clr-negro);
+}
+
+#cuadro3 {
+    border-left: 2px solid var(--clr-negro);
+    border-bottom: 2px solid var(--clr-negro);
+}
+
+#cuadro4 {
+    border-right: 2px solid var(--clr-negro);
+}
+
+#cuadro6 {
+    border-left: 2px solid var(--clr-negro);
+}
+
+#cuadro7 {
+    border-right: 2px solid var(--clr-negro);
+    border-top: 2px solid var(--clr-negro);
+}
+
+#cuadro8 {
+    border-top: 2px solid var(--clr-negro);
+}
+
+#cuadro9 {
+    border-top: 2px solid var(--clr-negro);
+    border-left: 2px solid var(--clr-negro);
+}
+
+#txtJugador {
+    margin: 20px auto;
+    text-align: center;
+    width: 80%;
+    border-radius: 20px;
+} 
+
+#imgLogo {
+    position: fixed;
+    width: 80px;
+    bottom: 10px;
+    right: 50px;
+    transition-duration: .5s;
+}
+
+#imgLogo:hover {
+    width: 90px;
+}
